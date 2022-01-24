@@ -14,3 +14,10 @@ func ToUserDto(user models.User) UserDto{
 	}
 
 }
+
+func Crdpsts(user models.User) UserDto{
+	return UserDto{
+		Name:  user.Name,
+	}
+
+}

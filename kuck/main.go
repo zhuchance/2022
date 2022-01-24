@@ -21,6 +21,7 @@ func main() {
 	r.POST("/api/auth/register", controller.Register)
 	r.POST("/api/auth/login", controller.Loing)
 	r.GET("/api/auth/info",middleware.AuthMiddleware(), controller.Info)
+	r.GET("/api/Cdp",middleware.AuthMiddleware(),controller.Cdp)
 	panic(r.Run()) // 监听并在 0.0.0.0:8080 上启动服务
 
 }
